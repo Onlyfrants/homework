@@ -1,11 +1,10 @@
-package org.ibs.service_example.domain;
+package org.ibs.service_example.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
 @Getter
 @Setter
@@ -42,7 +41,10 @@ public class Employee {
         inverseJoinColumns = @JoinColumn(name = "course_id"))
     private List<Course> courses;
 
-    public Optional<Employee> getBoss() {
+    public Employee getBoss() {
         return null;
+    }
+
+    public void get() {
     }
 }
